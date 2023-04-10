@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Q4 Exercise 2</title>
+
+	<!--CSS-->
+	<style type="text/css">
+		.image1{
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 30%;
+		}
+		.image2{
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 20%;
+		}
+	</style>
+
+</head>
+<body style="font-family: sans-serif; background: #ebac04;">
+
+	<!--What is JavaScript-->
+	<h1 style="text-align: center; background: #f7df1e;">What is JavaScript?</h1>
+	<img src="What is JavaScript.jpeg" class="image1">
+	<br>
+
+	<p style="text-align: center;">JavaScript is a widely used scripting language on the internet.</p>
+	<p style="text-align: center;">Recognized and works in all major browsers.</p>
+	<p style="text-align: center;">Designed to add interactivity and functionality to the Web site.</p>
+	<br><br>
+
+	<!--gif-->
+	<img src="JS Gif.gif" class="image2">
+	<br><br>
+
+	<h2 style="text-align: center; background: #f7df1e;">Types of JavaScript Output</h2>
+
+	<!--window.alert-->
+	<h4>1. window.alert( );</h4>
+	<p>-The alert( ) method displays an alert box with a specified message and an OK button.</p>
+	<img src="alert.png">
+	<script>
+		window.alert("Hello Mrs. Santos, this is window.alert() code line it is an alert( ) method displays an alert box with a specified message and an OK button.");//Window Alert
+	</script>
+	<br>
+
+	<!--document.write-->
+	<h4>2. document.write( );</h4>
+	<p>-The write( ) method writes HTML expressions or JavaScript code to a document.</p>
+	<script>
+		document.write("<h2>Hello!</h2><p>This is a document.write() code line! It is a method writes HTML expressions or JavaScript code to a document.</p>");//document.write
+	</script>
+	<img src="document.write.png">
+	<br>
+
+	<!--innerHTML-->
+	<h4>3. innerHTML</h4>
+	<p>-The innerHTML property sets or returns the HTML content (inner HTML) of an element.It can be combined with document.getElementById.</p>
+	<p>Hello, my name is <span id="name">Name.</span></p>
+	<script>
+		document.getElementById("name").innerHTML = "Hee Yoon";
+	</script>
+	<img src="inner.png">
+	<br><br>
+
+
+	<br>
+	<footer style="color: white; text-align: center;">
+		<small>&copy;HYChoi 2022-23</small>
+	</footer>
+
+</body>
+</html>
