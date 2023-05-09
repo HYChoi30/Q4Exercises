@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<title>Q4 Exercise 5</title>
+	<style type="text/css">
+		img{
+			width: 150px;
+		}
+		#fig1,#fig2{
+			width: 500px;
+		}
+		h2{
+			text-align: center;
+		}
+		p{
+			text-align: center;
+		}
+	</style>
+
+</head>
+<body class="bg-dark">
+	<div class="container mt-3 bg-secondary text-light">
+		<h2>How does a light bulb light up?</h2>
+		<p>Light bulbs consist of only a few basic parts. The metal base has two metal contacts that connect to the ends of an electrical circuit. The metal contacts attach to two stiff wires, which themselves are connected by a thin metal filament. The filament is the thin wire you see in the middle of the light bulb, held up by a glass mount. All of this exists within a glass bulb filled with an inert  gas, such as argon.</p>
+		<audio id="audio" src="turnonlights.mp3"></audio>
+		<button class="btn btn-primary" onmouseover="On()" onmouseout="Off()">SWITCH ON LIGHTS</button>
+		<img src="turnoff.png" id="Bulb">
+
+		<h2>Ohm's Law Equation</h2>
+		<p>Ohm's principal discovery was that the amount of electric current through a metal conductor in a circuit is directly proportional to the voltage impressed across it, for any given temperature. Ohm expressed his discovery in the form of a simple equation, describing how voltage, current, and resistance interrelate: <kbd>Voltage(E) = Current(I)Resistance(2)</kbd></p>
+		<img src="fig1.png" id="fig1">
+
+		<p>Calculate the amount of Current(I) in a circuit, given vaules of Voltage(E) and Resistance(R): <kbd>I = E/R</kbd></p>
+		<div class="row">
+			<div class="col-6">
+				<img src="fig2.png" id="fig2">
+			</div>
+			<div class="col-6 mt-5">
+				Enter Voltage(E):<input type="text" id="V" class="form-control"><br>
+				Enter Resistance(R):<input type="text" id="R" class="form-control"><br>
+				<input type="submit" value="Compute" class="btn btn-primary"><br>
+				<h4 id="Output" class="text-light"></h4>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			function On(){
+				document.getElementById('Bulb').src = "turnon.png";
+				document.getElementById('audio').play();
+			}
+			function Off(){
+				document.getElementById('Bulb').src = "turnoff.png";
+				document.getElementById('audio').pause();
+			}
+			function Compute(){
+				let Voltage = document.getElementById('V').value;
+				let Resistance = document.getElementById('R').value;
+				let Current = Voltage/Resistance;
+				document.getElementById('Output').innerHTML = "The Current(I) is: " + Current;
+			}
+		</script><br>
+
+		<p>Sources:</p>
+			<a href="https://www.allaboutcircuits.com/textbook/direct-current/chpt-2/voltage-current-resistance-relate/">https://www.allaboutcircuits.com/textbook/direct-current/chpt-2/voltage-current-resistance-relate/</a><br>
+			<a href="https://www.wonderopolis.org/wonder/what-makes-a-light-bulb-light-up">https://www.wonderopolis.org/wonder/what-makes-a-light-bulb-light-up</a>
+	</div>
+</body>
+</html>
